@@ -13,10 +13,10 @@ import Image from 'next/image';
 const Hero = ({ stars = 0 }: { stars?: number }) => {
   return (
     <Container className={`flex flex-col items-start justify-center`}>
-      <div className="flex h-full w-full">
-        <div className="p-5">
+      <div className="flex h-full w-full items-center">
+        <div className="p-3 sm:p-5 shrink-0">
           <div className="w-fit rounded-[9px] border p-[3.8px] dark:border-neutral-700">
-            <div className="box-border h-25 w-25 overflow-hidden rounded-[8px] border bg-neutral-200 object-cover p-1 select-none md:h-30 md:w-30 dark:bg-white">
+            <div className="box-border h-20 w-20 overflow-hidden rounded-[8px] border bg-neutral-200 object-cover p-1 select-none sm:h-25 sm:w-25 md:h-30 md:w-30 dark:bg-white">
               <Image
                 src="/file_00000000494082118e02923b336f6b72.png"
                 alt="Mojahid Hassan - Full-Stack Developer & Indie Maker"
@@ -28,8 +28,8 @@ const Hero = ({ stars = 0 }: { stars?: number }) => {
             </div>
           </div>
         </div>
-        <div className="flex flex-1 flex-col justify-center md:gap-1">
-          <div className="flex items-center justify-between">
+        <div className="flex flex-1 min-w-0 flex-col justify-center py-3 pr-3 gap-0.5 sm:gap-1 sm:py-5 sm:pr-5">
+          <div className="flex items-center justify-between gap-1 overflow-hidden">
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button variant="ghost" size="custom" asChild>
@@ -38,7 +38,7 @@ const Hero = ({ stars = 0 }: { stars?: number }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <div className="flex items-center gap-1.5">
+                    <div className="flex items-center gap-1.5 text-xs sm:text-sm">
                       <span>
                         <GitHubLogo />
                       </span>
@@ -54,20 +54,22 @@ const Hero = ({ stars = 0 }: { stars?: number }) => {
             <VisitorCounter />
           </div>
 
-          <h1 className="flex items-center gap-1.5 text-2xl font-medium text-neutral-700 md:pb-0.5 md:text-3xl dark:text-neutral-50">
-            <span>Mojahid Hassan</span>
-            <Image
-              src="/images/icons8-verified-badge-100.png"
-              alt="Verified Badge"
-              width={24}
-              height={24}
-              className="size-5 md:size-6 inline-block shrink-0 select-none"
-            />
+          <h1 className="flex items-center text-lg sm:text-2xl md:text-3xl font-semibold tracking-tight text-neutral-800 dark:text-neutral-50 md:pb-0.5 leading-tight">
+            <span className="inline-flex items-center gap-1.5 whitespace-nowrap">
+              <span>Mojahid Hassan</span>
+              <Image
+                src="/images/icons8-verified-badge-100.png"
+                alt="Verified Badge"
+                width={24}
+                height={24}
+                className="size-4.5 sm:size-5.5 md:size-6 inline-block shrink-0 select-none align-middle"
+              />
+            </span>
           </h1>
-          <span className="flex items-center gap-2 text-sm font-medium text-neutral-500/70 md:text-base dark:text-neutral-400">
+          <span className="flex items-center gap-2 text-xs sm:text-sm md:text-base font-medium text-neutral-500/80 dark:text-neutral-400 leading-snug">
             Full-Stack Developer & Indie Maker
           </span>
-          <h2 className="text-xs font-medium text-neutral-500/70 dark:text-neutral-400">
+          <h2 className="text-[11px] sm:text-xs font-medium text-neutral-500/70 dark:text-neutral-400">
             18, West Bengal, India
           </h2>
         </div>
